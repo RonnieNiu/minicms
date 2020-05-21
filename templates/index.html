@@ -3,10 +3,11 @@
 {% block title %} 首页 {% endblock title %}
 
 {% block content %}
-<ul> 
-    {% for column in columns %}
+
+<ul>
+    {% for home in home_display %}
         <li>
-            <a href="{{ column.get_absolute_url }}"> {{ column.name }} </a>
+            <a href="{{ home.get_absolute_url }}"> {{ home.name }} </a>
         </li>
     {% endfor %}
 </ul>
